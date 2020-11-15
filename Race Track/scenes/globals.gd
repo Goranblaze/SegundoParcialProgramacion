@@ -1,5 +1,6 @@
 extends Node
 
+
 var Minuto = 0.0
 var Segundo = 0.0
 var Centesima = 0.0
