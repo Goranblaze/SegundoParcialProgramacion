@@ -11,6 +11,8 @@ func _ready():
 
 
 func _on_metaFinalizada():
+	Globals.SaveHistory()
+	
 	var newScene = load("res://scenes/screens/levelSelection.tscn").instance()
 	var oldScene = get_tree().get_current_scene()
 	get_tree().get_root().add_child(newScene)
