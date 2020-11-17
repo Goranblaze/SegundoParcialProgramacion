@@ -11,12 +11,14 @@ func _ready():
 
 
 func _on_metaFinalizada():
-	Globals.SaveHistory()
+	var tiempo = Globals.SaveHistory()
 	
 	var newScene = load("res://scenes/screens/levelClear.tscn").instance()
 	var oldScene = get_tree().get_current_scene()
 	get_tree().get_root().add_child(newScene)
 	get_tree().set_current_scene(newScene)
+	
+	newScene.Set_UltimoTiempo(tiempo)
 	
 	oldScene.queue_free()
 	pass # Replace with function body.
